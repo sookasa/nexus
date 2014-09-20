@@ -34,7 +34,7 @@ jQuery.ajaxSetup({
         }
 
         if (!safeMethod(settings.type) && sameOrigin(settings.url)) {
-            xhr.setRequestHeader("X-CSRFToken", getCookie('sookasa_csrf'));
+            xhr.setRequestHeader("X-CSRFToken", getCookie(sookasa.csrf_cookie_name));
         }
     }
 });
